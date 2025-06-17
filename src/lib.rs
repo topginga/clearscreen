@@ -17,16 +17,17 @@
 //! If you are supporting Windows in any capacity, the [`is_windows_10()`] documentation is
 //! **required reading**.
 
+#![doc(html_favicon_url = "https://watchexec.github.io/logo:clearscreen.svg")]
+#![doc(html_logo_url = "https://watchexec.github.io/logo:clearscreen.svg")]
+#![warn(missing_docs)]
+
+/// Clears the screen using the clear() function
 #[macro_export]
 macro_rules! clear {
     () => {
         clearscreen::clear().expect("Failed to clear screen");
     };
 }
-
-#![doc(html_favicon_url = "https://watchexec.github.io/logo:clearscreen.svg")]
-#![doc(html_logo_url = "https://watchexec.github.io/logo:clearscreen.svg")]
-#![warn(missing_docs)]
 
 use std::{
 	borrow::Cow,
